@@ -1,0 +1,26 @@
+[
+  {
+    "date-idea": "Go bowling and grab milkshakes",
+    "dating-length": 1,
+    "mood": "Indoor",
+    "energy": "Active"
+  },
+  {
+    "date-idea": "Picnic in the park",
+    "dating-length": 1,
+    "mood": "Outdoor",
+    "energy": "Active"
+  },
+  {
+    "date-idea": "Cooking class together",
+    "dating-length": 2,
+    "mood": "Indoor",
+    "energy": "Active"
+  },
+  {
+    "date-idea": "Hiking and sunset viewpoint",
+    "dating-length": 3,
+    "mood": "Outdoor",
+    "energy": "Active"
+  }
+]
