@@ -1,3 +1,4 @@
+import data from "./data.json";
 import { useState } from "react";
 import "./App.css";
 
@@ -7,28 +8,21 @@ function App() {
   const [energy, setEnergy] = useState(null);
   const [result, setResult] = useState("");
 
-async function generate() {
-  const res = await fetch("http://127.0.0.1:5000/api/date-ideas", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      length,
-      mood,
-      energy
-    })
-  });
+function generate() {
+  const results = data.filter(
+    item =>
+      item["dating-length"] === length &&
+      item.mood.toLowerCase() === mood.toLowerCase() &&
+      item.energy.toLowerCase() === energy.toLowerCase()
+  );
 
-  const data = await res.json();
-
-  if (!data.results || data.results.length === 0) {
-    setResult(data.error ? data.error : "No ideas found");
+  if (results.length === 0) {
+    setResult("No ideas found");
     return;
   }
 
   const random =
-    data.results[Math.floor(Math.random() * data.results.length)];
+    results[Math.floor(Math.random() * results.length)];
 
   setResult(random["date-idea"]);
 }
