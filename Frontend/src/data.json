@@ -1,6 +1,8 @@
 [
   { "date-idea": "Museum is the move if its too hot outside and both of you are artistic or into fantasy/Sci-Fi", "dating-length": 1, "mood": "Indoor", "energy": "Relaxed" },
-  { "date-idea": "Farmers Market if the weather is perfect", "dating-length": 1, "mood": "Outdoor", "energy": "Relaxed" },
+  { "date-idea": "Farmers Market is a nice stroll, great ice breaker if one of you can lead/yap", "dating-length": 1, "mood": "Outdoor", "energy": "Relaxed" },
+  { "date-idea": "Walk in the park or a dog park if you guys have pets. Nice if both of you are low maintenance", "dating-length": 1, "mood": "Outdoor", "energy": "Relaxed" },
+  { "date-idea": "Picnic in the park. High effort but fun. Bring games, snacks, drinks, a blanket, and positivity", "dating-length": 1, "mood": "Outdoor", "energy": "Relaxed" },
   { "date-idea": "Zoo is always a good time with and a perfect ice breaker", "dating-length": 1, "mood": "Outdoor", "energy": "Active" },
   { "date-idea": "Hiking but only if you're in shape", "dating-length": 1, "mood": "Outdoor", "energy": "Active" },
   { "date-idea": "Thrifting is perfect if both of y'all are artsy", "dating-length": 1, "mood": "Indoor", "energy": "Relaxed" },
@@ -39,5 +41,5 @@
   { "date-idea": "Travel - road-trip, cruise, out-of-state, national parks, etc.", "dating-length": 3, "mood": "Mixed", "energy": "Active" },
   { "date-idea": "DIY Projects are a great way to stay creative and have fun together. Paint a room or build something", "dating-length": 3, "mood": "Indoor", "energy": "Active" },
   { "date-idea": "Anime Convention for the anime fans. Dress up even if you're not into anime. Like halloween but better", "dating-length": 3, "mood": "Indoor", "energy": "Active" },
-  { "date-idea": "Amtrak Trip is a great way to see the country and spend time together. Low energy ", "dating-length": 3, "mood": "Mixed", "energy": "Relaxed" },
+  { "date-idea": "Amtrak Trip is a great way to see the country and spend time together. Low energy ", "dating-length": 3, "mood": "Mixed", "energy": "Relaxed" }
 ]

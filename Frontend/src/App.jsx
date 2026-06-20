@@ -8,21 +8,21 @@ function App() {
   const [energy, setEnergy] = useState(null);
   const [result, setResult] = useState("");
 
-function generateDate() {
-  const pool = data.filter(
+function generate() {
+  const results = data.filter(
     item =>
-      item["dating-length"] <= selectedLength &&
-      item.mood === selectedMood &&
-      item.energy === selectedEnergy
+      item["dating-length"] <= length &&
+      item.mood.toLowerCase() === mood.toLowerCase() &&
+      item.energy.toLowerCase() === energy.toLowerCase()
   );
 
-  if (pool.length === 0) {
-    setResult("No matching dates found.");
+  if (results.length === 0) {
+    setResult("No ideas found");
     return;
   }
 
   const random =
-    pool[Math.floor(Math.random() * pool.length)];
+    results[Math.floor(Math.random() * results.length)];
 
   setResult(random["date-idea"]);
 }
