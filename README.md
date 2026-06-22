@@ -4,6 +4,6 @@ LAADSSS! Women be putting a lot of pressure on us to plan dates, be spontaneous,
 
 Well im here to tell you... I can solve one of those problems today! 
 
-SIMPLY click on this link and the rest is easy. No more planning dates when I can do it for you!
+SIMPLY click on this link and the rest is easy.
 
 https://p-chandra.github.io/Date/
