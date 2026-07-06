@@ -1,12 +1,31 @@
 import data from "./data.json";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./App.css";
 
 function App() {
   const [length, setLength] = useState(null);
   const [mood, setMood] = useState(null);
   const [energy, setEnergy] = useState(null);
-  const [result, setResult] = useState("");
+  const [result, setResult] = useState(null);
+  const [shownIdeas, setShownIdeas] = useState([]);
+
+  const resultRef = useRef(null);
+
+  // Scroll to result whenever a new one is generated
+  useEffect(() => {
+    if (result) {
+      resultRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, [result]);
+
+  // Reset when filters change
+  useEffect(() => {
+    setShownIdeas([]);
+    setResult("");
+  }, [length, mood, energy]);
 
   function generate() {
     const results = data.filter(
@@ -16,15 +35,27 @@ function App() {
         item.energy.toLowerCase() === energy.toLowerCase()
     );
 
-    if (results.length === 0) {
-      setResult("No ideas found. Try another combination.");
-      return;
+    setResult({
+      title: "No Matches",
+      description: "Try another combination."
+    });
+
+    // Only use ideas that haven't been shown yet
+    let available = results.filter(
+      (item) => !shownIdeas.includes(item.title)
+    );
+
+    // If all ideas have been shown, start over
+    if (available.length === 0) {
+      available = results;
+      setShownIdeas([]);
     }
 
     const random =
-      results[Math.floor(Math.random() * results.length)];
+      available[Math.floor(Math.random() * available.length)];
 
-    setResult(random["date-idea"]);
+    setResult(random);
+    setShownIdeas((prev) => [...prev, random.title]);
   }
 
   const matchingCount = data.filter(
@@ -36,16 +67,16 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Welcome!</h1>
+      <h1>Date Generator</h1>
 
       <p className="subtitle">
-        Help Me To Help You
+        Find something you'll both actually enjoy.
       </p>
 
       <div className="progress">
-        <div className={length ? "done" : ""}>① Stage</div>
-        <div className={mood ? "done" : ""}>② Activity</div>
-        <div className={energy ? "done" : ""}>③ Energy</div>
+        <div className={length ? "done" : ""}>Relationship</div>
+        <div className={mood ? "done" : ""}>Activity</div>
+        <div className={energy ? "done" : ""}>Energy</div>
       </div>
 
       <div className="section">
@@ -56,21 +87,21 @@ function App() {
             onClick={() => setLength(1)}
             className={length === 1 ? "selected" : ""}
           >
-            💫 Just Started Dating
+            New Relationship
           </button>
 
           <button
             onClick={() => setLength(2)}
             className={length === 2 ? "selected" : ""}
           >
-            ❤️ Getting Serious
+            Getting Serious
           </button>
 
           <button
             onClick={() => setLength(3)}
             className={length === 3 ? "selected" : ""}
           >
-            💍 Committed Relationship
+            Long-Term Relationship
           </button>
         </div>
       </div>
@@ -83,14 +114,14 @@ function App() {
             onClick={() => setMood("Indoor")}
             className={mood === "Indoor" ? "selected" : ""}
           >
-            🏠 Indoor
+           Indoor
           </button>
 
           <button
             onClick={() => setMood("Outdoor")}
             className={mood === "Outdoor" ? "selected" : ""}
           >
-            🌳 Outdoor
+            Outdoor
           </button>
         </div>
       </div>
@@ -103,14 +134,14 @@ function App() {
             onClick={() => setEnergy("Relaxed")}
             className={energy === "Relaxed" ? "selected" : ""}
           >
-            😌 Relaxed
+            Relaxed
           </button>
 
           <button
             onClick={() => setEnergy("Active")}
             className={energy === "Active" ? "selected" : ""}
           >
-            ⚡Active
+            Active
           </button>
         </div>
       </div>
@@ -123,16 +154,21 @@ function App() {
 
       {length && mood && energy && (
         <button className="generate-btn" onClick={generate}>
-          Generate Date Idea
+          {result ? "Generate Another Date Idea" : "Generate Date Idea"}
         </button>
       )}
 
-      {result && (
-        <div className="result-card">
-          <h3>🎉 Your Date Idea</h3>
-          <p>{result}</p>
-        </div>
-      )}
+    {result && (
+      <div ref={resultRef} className="result-card">
+        <h3>Recommended Date</h3>
+
+        <h2 className="date-title">
+          {result.title}
+        </h2>
+
+        <p>{result.description}</p>
+      </div>
+    )}
     </div>
   );
 }
