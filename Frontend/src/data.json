@@ -81,13 +81,20 @@
     "description": "For the retro lovers but also for the alcoholics. Another great ice breaker for people who lack hobbies",
     "dating-length": 1,
     "mood": "Indoor",
-    "energy": "Active"
+    "energy": "Relaxed"
   },
   {
     "title": "Pickleball",
     "description": "For people who already know how to play or actually want to learn. If you drink matcha, chances are you will be good at this sport",
     "dating-length": 1,
     "mood": "Outdoor",
+    "energy": "Active"
+  },
+  {
+    "title": "Pickleball",
+    "description": "For people who already know how to play or actually want to learn. If you drink matcha, chances are you will be good at this sport",
+    "dating-length": 1,
+    "mood": "Indoor",
     "energy": "Active"
   },
   {
@@ -123,6 +130,13 @@
     "description": "Great way to enjoy the weather, be outdoors, and have fun. Do not recommend if you're scared of embarrassment (you're no fun)",
     "dating-length": 1,
     "mood": "Indoor",
+    "energy": "Relaxed"
+  },
+  {
+    "title": "Driving Range",
+    "description": "Great way to enjoy the weather, be outdoors, and have fun. Do not recommend if you're scared of embarrassment (you're no fun)",
+    "dating-length": 1,
+    "mood": "Outdoor",
     "energy": "Relaxed"
   },
   {
