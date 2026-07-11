@@ -1,12 +1,10 @@
 :root {
-  --bg: #0f1115;
-  --surface: #1a1d23;
-  --surface-hover: #242933;
-  --accent: #8b0000;
-  --accent-hover: #a80000;
-  --text: #f5f5f5;
-  --subtext: #9ca3af;
-  --border: #2e3440;
+  --bg: #f7f5f2;
+  --surface: #ffffff;
+  --text: #1f1f1f;
+  --muted: #6b6b6b;
+  --border: #dedbd5;
+  --accent: #8f3d3d;
 }
 
 * {
@@ -15,196 +13,99 @@
 
 body {
   margin: 0;
-  font-family: Inter, system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
+  font-family: Inter, system-ui, sans-serif;
 }
 
-#root {
-  display: flex;
-  justify-content: center;
+button {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+  padding: 12px 14px;
+}
+
+button:hover,
+.selected {
+  border-color: var(--accent);
+}
+
+.selected,
+.generate-btn {
+  background: var(--accent);
+  color: white;
 }
 
 .app {
-  width: 100%;
-  max-width: 430px;
-  min-height: 100vh;
-  padding: 28px 20px 40px;
+  width: min(100%, 520px);
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-h1 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 8px;
-  font-weight: 700;
+.subtitle,
+.matches,
+.result-label,
+.result-card p {
+  color: var(--muted);
 }
 
 .subtitle {
-  text-align: center;
-  color: var(--subtext);
-  margin-bottom: 36px;
-  line-height: 1.5;
-}
-
-.progress {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  color: var(--subtext);
-  font-size: .9rem;
-}
-
-.progress .done {
-  color: white;
-  font-weight: 700;
+  margin: 0 0 32px;
 }
 
 .section {
-  margin-bottom: 30px;
+  margin: 24px 0;
 }
 
 .section h2 {
-  margin-bottom: 14px;
   font-size: 1rem;
-  font-weight: 600;
+  margin: 0 0 10px;
 }
 
 .button-group {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
-button {
-  width: 100%;
-  padding: 18px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  color: white;
-  text-align: left;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: .25s;
-}
-
-button:hover {
-  background: var(--surface-hover);
-  transform: translateY(-2px);
-}
-
-.selected {
-  background: var(--accent) !important;
-  border-color: var(--accent);
+.button-group button {
+  flex: 1;
 }
 
 .matches {
-  text-align: center;
-  color: var(--subtext);
-  margin: 24px 0;
+  margin: 28px 0 12px;
 }
 
 .generate-btn {
-  position: sticky;
-  bottom: 16px;
-  text-align: center;
-  background: var(--accent);
-  border: none;
-  border-radius: 14px;
-  font-size: 1.05rem;
-  letter-spacing: .5px;
-  min-height: 60px;
-}
-
-.generate-btn:hover {
-  background: var(--accent-hover);
+  width: 100%;
+  border-color: var(--accent);
+  margin-bottom: 24px;
 }
 
 .result-card {
-  text-align:center;
-  margin-top: 32px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
   background: var(--surface);
-  border-left: 5px solid var(--accent);
-  border-radius: 14px;
-  padding: 22px;
-  animation: fade .25s ease;
+  padding: 20px;
 }
 
-.result-card h3 {
-  font-size:1.3rem;
-  margin-top: 0;
-  margin-bottom: 16px;
+.result-card h2 {
+  margin: 6px 0 10px;
 }
 
 .result-card p {
-  font-size:1.05rem;
-  color: var(--subtext);
-  line-height: 1.7;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.result-card {
-  margin-top: 32px;
-  background: var(--surface);
-  border-left: 5px solid var(--accent);
-  border-radius: 14px;
-  padding: 28px;
-  text-align: center;
-  animation: fade .25s ease;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .result-label {
-  color: var(--subtext);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.75rem;
-  margin-bottom: 14px;
+  font-size: 0.85rem;
 }
 
-.result-title {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: white;
-  margin-bottom: 18px;
-  letter-spacing: 1px;
-}
-
-.result-description {
-  color: var(--subtext);
-  line-height: 1.8;
-  font-size: 1.05rem;
-}
-
-.result-card::before {
-  content: "";
-  display: block;
-  height: 1px;
-  background: var(--border);
-  margin-bottom: 20px;
-}
-
-.date-title {
-  margin: 12px 0 18px;
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-.result-card p {
-  text-align: center;
-  font-size: 1.05rem;
-  line-height: 1.7;
+@media (max-width: 520px) {
+  .button-group {
+    flex-direction: column;
+  }
 }

@@ -35,6 +35,27 @@
     "energy": "Relaxed"
   },
   {
+    "title": "Botanical Garden",
+    "description": "Easy walk, pretty scenery, and plenty to talk about without the pressure of sitting face to face the whole time",
+    "dating-length": 1,
+    "mood": "Outdoor",
+    "energy": "Relaxed"
+  },
+  {
+    "title": "Coffee Walk",
+    "description": "Grab coffee then walk around a nice neighborhood, park, or downtown area. Simple but actually good for talking",
+    "dating-length": 1,
+    "mood": "Outdoor",
+    "energy": "Relaxed"
+  },
+  {
+    "title": "Food Truck Crawl",
+    "description": "Try a few random spots and rate everything together. Low commitment but fun if you both like food",
+    "dating-length": 1,
+    "mood": "Outdoor",
+    "energy": "Relaxed"
+  },
+  {
     "title": "Zoo",
     "description": "Always a good time with and a perfect ice breaker, talk shit about the animals",
     "dating-length": 1,
@@ -84,14 +105,14 @@
     "energy": "Relaxed"
   },
   {
-    "title": "Pickleball",
+    "title": "Outdoor Pickleball",
     "description": "For people who already know how to play or actually want to learn. If you drink matcha, chances are you will be good at this sport",
     "dating-length": 1,
     "mood": "Outdoor",
     "energy": "Active"
   },
   {
-    "title": "Pickleball",
+    "title": "Indoor Pickleball",
     "description": "For people who already know how to play or actually want to learn. If you drink matcha, chances are you will be good at this sport",
     "dating-length": 1,
     "mood": "Indoor",
@@ -126,14 +147,14 @@
     "energy": "Active"
   },
   {
-    "title": "Driving Range",
+    "title": "Indoor Driving Range",
     "description": "Great way to enjoy the weather, be outdoors, and have fun. Do not recommend if you're scared of embarrassment (you're no fun)",
     "dating-length": 1,
     "mood": "Indoor",
     "energy": "Relaxed"
   },
   {
-    "title": "Driving Range",
+    "title": "Outdoor Driving Range",
     "description": "Great way to enjoy the weather, be outdoors, and have fun. Do not recommend if you're scared of embarrassment (you're no fun)",
     "dating-length": 1,
     "mood": "Outdoor",
@@ -217,6 +238,13 @@
     "energy": "Active"
   },
   {
+    "title": "Trivia Night",
+    "description": "Perfect if you want something social without it feeling too intense. Bonus points if you both are confidently wrong",
+    "dating-length": 2,
+    "mood": "Indoor",
+    "energy": "Active"
+  },
+  {
     "title": "Carnivals",
     "description": "Requires very little planning but a lot of money. If your idea of a vacation is relaxing then this is perfect",
     "dating-length": 2,
@@ -224,8 +252,22 @@
     "energy": "Active"
   },
   {
+    "title": "Beach Day",
+    "description": "Pack snacks, bring towels, walk around, and hang out by the water. Works best when you can make a whole afternoon out of it",
+    "dating-length": 2,
+    "mood": "Outdoor",
+    "energy": "Relaxed"
+  },
+  {
     "title": "Lunch - Dinner",
     "description": "Great for catching up but also spending time with each other, especially if the spark is dying",
+    "dating-length": 2,
+    "mood": "Indoor",
+    "energy": "Relaxed"
+  },
+  {
+    "title": "Comedy Show",
+    "description": "Great if you both have a similar sense of humor. Also gives you something easy to talk about after",
     "dating-length": 2,
     "mood": "Indoor",
     "energy": "Relaxed"
@@ -282,6 +324,20 @@
   {
     "title": "Amtrak Trip",
     "description": "A great way to see the country and spend QUALITY time together",
+    "dating-length": 3,
+    "mood": "Mixed",
+    "energy": "Relaxed"
+  },
+  {
+    "title": "Volunteer Together",
+    "description": "A meaningful date if you both care about the same causes. Also shows a lot about someone's character",
+    "dating-length": 3,
+    "mood": "Mixed",
+    "energy": "Active"
+  },
+  {
+    "title": "Weekend Cabin Stay",
+    "description": "Cook, watch movies, go for walks, and fully reset together. Definitely more of a long-term relationship move",
     "dating-length": 3,
     "mood": "Mixed",
     "energy": "Relaxed"
